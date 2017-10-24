@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BattleTank-1887.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\usuario\documentos\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTank.cpp.obj"
+"E:\usuario\documentos\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTankGameModeBase.cpp.obj"
+"E:\usuario\documentos\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\TankPlayerController.cpp.obj"
+"E:\usuario\documentos\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\BattleTank.generated.cpp.obj"
+"E:\unrealEngine4.16\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\BattleTank\PCLaunch.rc.res"
+"E:\unrealEngine4.16\UE_4.16\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"E:\usuario\documentos\04_BattleTank\BattleTank\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-BattleTank-1887.lib"
