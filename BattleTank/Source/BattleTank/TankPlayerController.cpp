@@ -2,6 +2,7 @@
 
 #include "TankPlayerController.h"
 #include "Engine/World.h"
+#include "Tank.h"
 
 void ATankPlayerController::BeginPlay() 
 {
@@ -12,7 +13,10 @@ void ATankPlayerController::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Playercontroller not possesing a tank"));
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Playercontroller possesing: %s"), *(ControlledTank->GetName()));
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Playercontroller possesing: %s"), *(ControlledTank->GetName()));
+	}
 }
 
 ATank* ATankPlayerController::GetControlledTank() const 
@@ -35,10 +39,7 @@ void ATankPlayerController::AimTowardsCrosshair() {
 	if (GetSightRayHitLocation(HitLocation))
 	{
 		GetControlledTank()->AimAt(HitLocation);
-	}
-	
-
-		
+	}	
 }
 
 bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
@@ -72,7 +73,6 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 		)
 	{
 		HitLocation = HitResult.Location;
-		
 		return true;
 	}
 	HitLocation = FVector(0);

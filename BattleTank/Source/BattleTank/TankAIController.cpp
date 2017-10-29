@@ -7,9 +7,6 @@
 #include "GameFramework/PlayerController.h"
 #include "Components/ActorComponent.h"
 
-
-
-
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -28,10 +25,7 @@ void ATankAIController::BeginPlay()
 ATank * ATankAIController::GetPlayerTank() const
 {
 	auto PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
-	if (!PlayerPawn)
-	{
-		return nullptr;
-	}
+	if (!PlayerPawn){return nullptr;}
 	return Cast<ATank>(PlayerPawn);
 }
 

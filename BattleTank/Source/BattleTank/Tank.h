@@ -28,18 +28,20 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Firing)
 	void Fire();
 
-
+protected:
 	UTankAimingComponent * TankAimingComponent = nullptr;
 
 
 private: 
 	virtual void BeginPlay() override;
-	
+
+	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Sets default values for this pawn's properties
 	ATank();
 	
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 10000; //sensible starting value of 1000 m/s
+	float LaunchSpeed = 4000; //sensible starting value of 1000 m/s
 
 };
