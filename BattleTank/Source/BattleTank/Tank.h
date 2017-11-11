@@ -21,19 +21,18 @@ class BATTLETANK_API ATank : public APawn
 public:	
 	void AimAt(FVector HitLocation);
 
-
-
 	UFUNCTION(BlueprintCallable, Category = Firing)
 	void Fire();
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent * TankAimingComponent = nullptr;
 
-	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;
-
 private: 
+
 
 	// Sets default values for this pawn's properties
 	ATank();
